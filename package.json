@@ -1,0 +1,22 @@
+{
+  "name": "p3_briquet_vincent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "Sass": "./node_modules/.bin/node-sass --watch ./Sass/main.scss ./CSS/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prazepam/Projet-3.git"
+  },
+  "author": "Vincent Briquet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prazepam/Projet-3/issues"
+  },
+  "homepage": "https://github.com/Prazepam/Projet-3#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
