@@ -1,0 +1,299 @@
+/*/POLICES/*/
+@font-face {
+    font-family: 'Shrikhand';
+    src: url(images/shrikhand/Shrikhand-Regular.otf) format('truetype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(images/roboto/Roboto-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url(images/roboto/Roboto-Thin.ttf) format('truetype');
+}
+
+/*/ VARIABLES /*/
+$lightgrey: #f4f4f4;
+$darkgrey: #e5e5e5;
+$footergrey: #282828;
+$purple : #9356DC;
+$iconcolor: #6b6b6b;
+$pink: #E054D2;
+$lightpurple: #F2E7FF;
+$mindgreen: #8ADDC5;
+$newgreen: #146C46;
+
+/*/ MIXINS /*/
+@mixin shadow-box {
+    box-shadow: 5px 5px 2px $darkgrey;
+}
+@mixin pic-details {
+    margin-left: 5%;
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    width: 90%;
+    border-radius: 10px 10px 0px 0px;
+}
+@mixin btn {
+    margin-top: 10%;
+    height: 40px;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    background: linear-gradient(0deg, $purple, $pink);
+    border-radius: 50px;
+    @include shadow-box;
+    cursor: pointer;
+}
+
+body{
+    margin-right: 0%;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+header{
+    width: 100%;
+    height: 60px;
+    img{
+        height: 50%;
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5%;
+    }
+}
+/*/ ACCUEIL /*/
+.search_barre{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: $darkgrey;
+    width: 100%;
+    height: 50px;
+    form{
+        width: 50%;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+    }
+    input{
+        background-color: transparent;
+        border: none;
+        color: black;
+    }
+}
+.describe{
+    background-color: $lightgrey;
+    height: 270px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1{
+        margin-top: 0%;
+        padding-top: 10%;
+        width: 60%;
+        margin-right: 10%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Roboto';
+    }
+    h2{
+        font-size: 100%;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        font-family: 'Roboto-Thin';
+        font-weight: lighter;
+    }
+    .button-title{
+        @include btn;
+    }
+}
+
+.menu{
+    width: 100%;
+    h1{
+        margin-left: 5%;
+    }
+    .service-item{
+        display: flex;
+        margin-left: 5%;
+        width: 90%;
+        height: 80px;
+        background-color: $lightgrey;
+        margin-bottom: 5%;
+        border-radius: 25px;
+        align-items: center;
+        box-shadow: 3px 5px 5px $darkgrey;
+        cursor: pointer;
+        .service-icon{
+            color: $iconcolor;
+            margin-right: 10%;
+            font-size: 110%;
+        }
+        .num{
+            background-color: $purple;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 9%;
+            height: 40%;
+            border-radius: 100%;
+            margin-left: -4%;
+            margin-right: 10%;
+        }
+        .service-text{
+            font-family: 'Roboto';
+            font-size: 110%;
+            font-weight: bold;
+        }
+    }
+}
+.service-item:hover > .service-icon{
+    color: $purple;
+}
+.service-item:hover{
+    background-color: $lightpurple;
+}
+.restaurants{
+    background-color: $lightgrey;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    h1{
+        margin-left: 5%;
+    }
+    .restaurant-descritption{
+        background-color: white;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 30%;
+        margin-top: 0%;
+    }
+    .New{
+        color: $newgreen;
+        background-color: $mindgreen;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        margin-left: 75%;
+
+    }
+}
+.restaurants-details{
+    width: 100%;
+    height: 1100px;
+    display: flex;
+    flex-direction: column;
+    .pic1{
+        background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+        @include pic-details;
+    }
+    .pic2{
+        background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+        @include pic-details;
+    }
+    .pic3{
+        background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+        @include pic-details;
+    }
+    .pic4{
+        background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+        @include pic-details;
+    }
+   
+}
+.foot-page{
+    background-color: $footergrey;
+    width: 100%;
+    height: 230px;
+    color: white;
+    .foot-title{
+        margin-left: 5%;
+        margin-top: 0%;
+        padding-top: 5%;
+    }
+    ul {
+        list-style-type: none;
+        text-decoration: none;
+        list-style: none;
+        list-style-image: none;
+        margin-left: -5%;
+    }
+        a{
+            list-style: none;
+            text-decoration: none;
+            color: white;
+        }
+    .foot-icon{
+        width: 90%;
+        height: 30px;
+        display: flex;
+        margin-left: 5%;
+        align-items: center;
+        .icon{
+            display: flex;
+            align-items: center;
+            width: 5%;
+            margin-left: 5%;
+        }
+    }
+    .list2{
+        height: 30px;
+        display: flex;
+        align-items: center;
+        margin-left: 5%;
+    }
+}  
+
+// MENU //
+.Menu{
+    width: 100%;
+    height: 1500px;
+    .restaurant-pic{
+        width: 100%;
+        height: 200px;
+    }
+    .pic1{
+        background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+        @include pic-details;
+    }
+    .restaurant-bloc{
+    background-color: $lightgrey;
+        .restaurant-title{
+        display: flex;
+        align-items: center;
+        margin-left: 5%;
+        width: 95%;
+        justify-content: space-around;
+        }
+        .food-box{
+        background-color: white;
+        display: flex;
+        margin-bottom: 5%;
+        width: 90%;
+        border-radius: 15px;
+        margin-left: 5%;
+        justify-content: space-between;
+        align-items: center;
+        }
+        .menu-button{
+        @include btn;
+        margin-bottom: 10%;
+        margin-left: 25%;
+        }
+    }
+}
