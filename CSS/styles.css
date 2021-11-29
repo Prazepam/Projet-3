@@ -78,6 +78,9 @@ header {
     border-radius: 50px;
     box-shadow: 5px 5px 2px #e5e5e5;
     cursor: pointer; }
+    .describe .button-title:hover {
+      opacity: 0.8;
+      box-shadow: 5px 5px 2px rgba(199, 199, 199, 0.79); }
 
 .menu {
   width: 100%; }
@@ -124,7 +127,7 @@ header {
 .restaurants {
   background-color: #f4f4f4;
   width: 100%;
-  height: 1300px;
+  height: 1400px;
   display: flex;
   flex-direction: column; }
   .restaurants h1 {
@@ -136,13 +139,16 @@ header {
     width: 90%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
     height: 25%;
     margin-top: 0%;
     margin-left: 5%;
     margin-bottom: 5%;
     border-radius: 0px 0px 10px 10px;
-    box-shadow: 5px 5px 2px #e5e5e5; }
+    box-shadow: 5px 5px 2px #e5e5e5;
+    cursor: pointer; }
+  .restaurants .restaurant-text {
+    width: 70%;
+    margin-left: 5%; }
   .restaurants .restaurant-name {
     font-weight: bold;
     margin-bottom: 2%;
@@ -157,13 +163,23 @@ header {
     justify-content: center;
     margin-left: 70%; }
   .restaurants .restaurant-like {
-    font-size: 150%; }
+    font-size: 150%;
+    margin-left: 10%; }
   .restaurants .restaurant-heart {
-    display: none; }
+    font-size: 150%;
+    margin-left: -6.37%;
+    color: transparent;
+    background-image: linear-gradient(0deg, #E054D2, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms; }
 
 .restaurants-details {
   min-width: 100%;
-  height: 1300px;
+  height: 350px;
   display: flex;
   flex-direction: column; }
   .restaurants-details .pic1 {
@@ -174,6 +190,7 @@ header {
     height: 200px;
     width: 90%;
     border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
     box-shadow: 5px 5px 2px #e5e5e5; }
   .restaurants-details .pic2 {
     background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
@@ -183,6 +200,7 @@ header {
     height: 200px;
     width: 90%;
     border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
     box-shadow: 5px 5px 2px #e5e5e5; }
   .restaurants-details .pic3 {
     background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
@@ -192,6 +210,7 @@ header {
     height: 200px;
     width: 90%;
     border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
     box-shadow: 5px 5px 2px #e5e5e5; }
   .restaurants-details .pic4 {
     background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
@@ -201,13 +220,11 @@ header {
     height: 200px;
     width: 90%;
     border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
     box-shadow: 5px 5px 2px #e5e5e5; }
-  .restaurants-details:hover .restaurant-like {
-    display: none; }
   .restaurants-details:hover .restaurant-heart {
-    font-size: 150%;
-    display: flex;
-    color: #9356DC; }
+    opacity: 1;
+    transform: scale(1.15); }
 
 .foot-page {
   background-color: #282828;
@@ -266,25 +283,29 @@ header {
     background-size: cover;
     background-position: center;
     height: 300px;
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
   .Menu .Mpic2 {
     background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
     background-size: cover;
     background-position: center;
     height: 300px;
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
   .Menu .Mpic3 {
     background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
     background-size: cover;
     background-position: center;
     height: 300px;
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
   .Menu .Mpic4 {
     background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
     background-size: cover;
     background-position: center;
     height: 300px;
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
   .Menu .restaurant-bloc {
     background-color: #f4f4f4;
     border-radius: 10px 10px 0px 0px;
@@ -309,7 +330,8 @@ header {
       margin-left: 5%;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 5px 5px 2px #e5e5e5; }
+      box-shadow: 5px 5px 2px #e5e5e5;
+      cursor: pointer; }
       .Menu .restaurant-bloc .food-box:hover .check {
         display: flex;
         height: 100%;

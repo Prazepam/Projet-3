@@ -30,12 +30,14 @@ $newgreen: #146C46;
     height: 200px;
     width: 90%;
     border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
 }
 @mixin pic-menu {
     background-size: cover;
     background-position: center;
     height: 300px;
     width: 100%;
+    cursor: pointer;
 }
 @mixin btn {
     margin-top: 10%;
@@ -115,6 +117,10 @@ header{
     }
     .button-title{
         @include btn;
+        &:hover {
+            opacity: 0.8;
+            box-shadow: 5px 5px 2px rgba(199,199,199,0.79);
+        }
     }
 }
 
@@ -168,7 +174,7 @@ header{
 .restaurants{
     background-color: $lightgrey;
     width: 100%;
-    height: 1300px;
+    height: 1400px;
     display: flex;
     flex-direction: column;
     h1{
@@ -181,13 +187,17 @@ header{
         width: 90%;
         display: flex;
         align-items: center;
-        justify-content: space-around;
         height: 25%;
         margin-top: 0%;
         margin-left: 5%;
         margin-bottom: 5%;
         border-radius: 0px 0px 10px 10px;
         @include shadow-box;
+        cursor: pointer;
+    }
+    .restaurant-text{
+        width: 70%;
+        margin-left: 5%;
     }
     .restaurant-name{
         font-weight: bold;
@@ -208,14 +218,25 @@ header{
     }
     .restaurant-like{
         font-size: 150%;
+        margin-left: 10%;
     }
     .restaurant-heart{
-        display: none;
+        font-size: 150%;
+        margin-left: -6.37%;
+        color: transparent;
+        background-image: linear-gradient((0deg, $pink, $purple));
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 400ms;
     }
+    
 }
 .restaurants-details{
     min-width: 100%;
-    height: 1300px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     .pic1{
@@ -238,15 +259,9 @@ header{
         @include pic-details;
         @include shadow-box;
     }
-    &:hover{
-        .restaurant-like{
-            display: none;
-        }
-        .restaurant-heart{
-            font-size: 150%;
-            display: flex;
-            color: $purple;
-        }
+    &:hover .restaurant-heart{
+        opacity: 1;
+        transform: scale(1.15);
     }
    
 }
@@ -354,6 +369,7 @@ header{
         justify-content: space-between;
         align-items: center;
         @include shadow-box;
+        cursor: pointer;
             &:hover{
                 .check{
                     display: flex;
