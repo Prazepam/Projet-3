@@ -1,0 +1,40 @@
+@use "../Sass/utiles/colors.scss";
+@mixin shadow-box {
+    box-shadow: 5px 5px 2px $darkgrey;
+}
+@mixin pic-details {
+    margin-left: 5%;
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    width: 90%;
+    border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
+    padding-top: 5%;
+}
+@mixin pic-menu {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    cursor: pointer;
+}
+@mixin btn {
+    margin-top: 10%;
+    height: 40px;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    background: linear-gradient(0deg, $purple, $pink);
+    border-radius: 50px;
+    @include shadow-box;
+    cursor: pointer;
+}
+@mixin purpletopink {
+    color: transparent;
+    background-image: linear-gradient((0deg, $pink, $purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+}

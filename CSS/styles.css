@@ -1,4 +1,5 @@
 /*/POLICES/*/
+@use "../Sass/utiles/colors.scss";
 /*/ VARIABLES /*/
 /*/ MIXINS /*/
 body {
@@ -192,7 +193,7 @@ header {
     margin-left: 10%; }
   .restaurants .restaurant-heart {
     font-size: 150%;
-    margin-left: -7%;
+    margin-left: -6.5%;
     color: transparent;
     background-image: linear-gradient(0deg, #E054D2, #9356DC);
     background-clip: text;
