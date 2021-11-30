@@ -1,12 +1,4 @@
 /*/POLICES/*/
-@font-face {
-    font-family: 'Shrikhand';
-    src: url(images/shrikhand/Shrikhand-Regular.otf) format('truetype');
-}
-@font-face {
-    font-family: 'Roboto';
-    src: url(images/roboto/Roboto-Regular.ttf) format('truetype');
-}
 
 /*/ VARIABLES /*/
 $lightgrey: #f4f4f4;
@@ -27,10 +19,11 @@ $newgreen: #146C46;
     margin-left: 5%;
     background-size: cover;
     background-position: center;
-    height: 200px;
+    height: 180px;
     width: 90%;
     border-radius: 10px 10px 0px 0px;
     cursor: pointer;
+    padding-top: 5%;
 }
 @mixin pic-menu {
     background-size: cover;
@@ -131,7 +124,7 @@ header{
     }
     .service-item{
         display: flex;
-        margin-left: 5%;
+        margin-left: 6%;
         width: 90%;
         height: 80px;
         background-color: $lightgrey;
@@ -140,6 +133,8 @@ header{
         align-items: center;
         box-shadow: 3px 5px 5px $darkgrey;
         cursor: pointer;
+        transform: scale(1);
+        transition-duration: 200ms;
         .service-icon{
             color: $iconcolor;
             margin-right: 10%;
@@ -170,11 +165,12 @@ header{
 }
 .service-item:hover{
     background-color: $lightpurple;
+    transform: scale(1.05);
 }
 .restaurants{
     background-color: $lightgrey;
     width: 100%;
-    height: 1400px;
+    height: 1300px;
     display: flex;
     flex-direction: column;
     h1{
@@ -194,18 +190,18 @@ header{
         border-radius: 0px 0px 10px 10px;
         @include shadow-box;
         cursor: pointer;
-    }
-    .restaurant-text{
-        width: 70%;
-        margin-left: 5%;
-    }
-    .restaurant-name{
-        font-weight: bold;
-        margin-bottom: 2%;
-        padding-top: 5%;
-    }
-    .restaurant-loc{
-        margin-top: 0%;
+        .restaurant-text{
+            width: 70%;
+            margin-left: 5%;
+            .restaurant-name{
+                font-weight: bold;
+                margin-bottom: 2%;
+                padding-top: 5%;
+            }
+            .restaurant-loc{
+                margin-top: 0%;
+            }
+        }
     }
     .New{
         color: $newgreen;
@@ -214,6 +210,7 @@ header{
         display: flex;
         justify-content: center;
         margin-left: 70%;
+        margin-top: 0%;
 
     }
     .restaurant-like{
@@ -222,7 +219,7 @@ header{
     }
     .restaurant-heart{
         font-size: 150%;
-        margin-left: -6.37%;
+        margin-left: -7%;
         color: transparent;
         background-image: linear-gradient((0deg, $pink, $purple));
         background-clip: text;
@@ -232,11 +229,15 @@ header{
         transition-property: transform;
         transition-duration: 400ms;
     }
+    .restaurant-link{
+        text-decoration: none;
+        color: black;
+        margin-top: 0%;
+    }
     
 }
 .restaurants-details{
     min-width: 100%;
-    height: 350px;
     display: flex;
     flex-direction: column;
     .pic1{
@@ -315,9 +316,14 @@ header{
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    .fleche{
+    .backM{
+        text-decoration: none;
+        color: black;
+        margin-left: 5%;
+        .fleche{
         font-size: 140%;
         margin-left: 5%;
+        }
     }
 }
 .Menu{
@@ -348,6 +354,7 @@ header{
     border-radius: 10px 10px 0px 0px ;
     font-family: 'Roboto', sans-serif;
     min-height: 1350px;
+    padding-bottom: 2%;
         .restaurant-title{
         display: flex;
         align-items: center;
@@ -366,37 +373,49 @@ header{
         height: 90px;
         border-radius: 15px;
         margin-left: 5%;
-        justify-content: space-between;
         align-items: center;
         @include shadow-box;
         cursor: pointer;
-            &:hover{
-                .check{
-                    display: flex;
-                    height: 100%;
-                    width: 80px;
-                    background-color: $mindgreen;
-                    color: white;
-                    border-radius: 0px 10px 10px 0px;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 130%;}
-            }
+        overflow: hidden;
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 1s;
             .food-description{
                 margin-left: 5%;
+                width: 70%;
+                margin-right: 5%;
             }
             .food-name{
                 font-weight: bold;
             }
             .food-price{
                 font-weight: bold;
-                margin-top: 20%;
                 margin-right: 5%;
+                margin-left: 70%;
+                transition-duration: 2s;
             }
-            .check{
-                display: none;
+            .food-priceandcheck{
+                display: flex;
+                height: 100%;
+                align-items: flex-end;
+                .check{
+                    display: flex;
+                    height: 100%;
+                    width: 5rem;
+                    background-color: $mindgreen;
+                    color: white;
+                    border-radius: 0px 10px 10px 0px;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 130%;
+                }
             }
-           
+        &:hover .food-price{
+            margin-left: 0%;
+        }
+        &:hover{
+            transform: scale(1.05);
+        }
         }
         .plat-title{
             font-weight: lighter;
@@ -409,6 +428,9 @@ header{
         @include btn;
         margin-bottom: 10%;
         margin-left: 25%;
+            &:hover {
+                opacity: 0.8;
+            }
         }
     }
 }
