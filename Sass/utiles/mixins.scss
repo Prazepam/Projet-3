@@ -22,7 +22,6 @@
 @mixin btn {
     margin-top: 10%;
     height: 40px;
-    width: 50%;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -36,5 +35,10 @@
     color: transparent;
     background-image: linear-gradient((0deg, $pink, $purple));
     background-clip: text;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text;;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
 }
