@@ -12,9 +12,11 @@
 
 @keyframes appear {
   0% {
-    transform: scale(0); }
+    transform: translateY(10%);
+    opacity: 0; }
   100% {
-    transform: scale(1); } }
+    transform: translateY(0%);
+    opacity: 1; } }
 
 body {
   margin-right: 0%;
@@ -405,10 +407,17 @@ header {
       box-shadow: 5px 5px 2px #e5e5e5;
       cursor: pointer;
       overflow: hidden;
-      transform: scale(1);
       transition-property: transform;
       transition-duration: 1s;
       animation: appear 3s; }
+      .Menu .food-box:nth-child(1) {
+        animation-delay: 200ms; }
+      .Menu .food-box:nth-child(2) {
+        animation-delay: 400ms; }
+      .Menu .food-box:nth-child(3) {
+        animation-delay: 600ms; }
+      .Menu .food-box:nth-child(4) {
+        animation-delay: 800ms; }
       .Menu .food-box .food-description {
         margin-left: 5%;
         width: 70%;

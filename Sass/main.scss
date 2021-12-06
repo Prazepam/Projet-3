@@ -371,6 +371,11 @@ header{
             }
         }
         .food-box{
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}){
+                    animation-delay: 200ms * $i;
+                }
+            }
             @include flex-center;
             background-color: white;
             justify-content: space-between;
@@ -382,7 +387,6 @@ header{
             @include shadow-box;
             cursor: pointer;
             overflow: hidden;
-            transform: scale(1);
             transition-property: transform;
             transition-duration: 1s;
             animation: appear 3s;
