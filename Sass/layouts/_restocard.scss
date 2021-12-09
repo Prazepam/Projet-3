@@ -1,6 +1,6 @@
-@import "../Sass/utiles/colors.scss";
-@import "../Sass/utiles/mixins.scss";
-@import "../Sass/utiles/animation.scss";
+@import "Sass/utiles/colors.scss";
+@import "Sass/utiles/mixins.scss";
+@import "Sass/utiles/animation.scss";
 
 @media screen and (min-width: 320px) {
     .restaurants{
@@ -108,7 +108,6 @@
     }
     
 }
-
 @media screen and (min-width: 768px) {
     .New{
         height: 15%;
@@ -129,7 +128,6 @@
         margin-left: -25px;
     }
 }
-
 @media screen and (min-width: 1440px){
     .restaurants{
         height: 1000px;

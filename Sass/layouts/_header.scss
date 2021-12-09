@@ -1,6 +1,6 @@
-@import "../Sass/utiles/colors.scss";
-@import "../Sass/utiles/mixins.scss";
-@import "../Sass/utiles/animation.scss";
+@import "Sass/utiles/colors.scss";
+@import "Sass/utiles/mixins.scss";
+@import "Sass/utiles/animation.scss";
 
 /*/Accueil/*/
 @media  screen and (min-width: 320px) {
@@ -45,9 +45,10 @@
             font-weight: lighter;
         }
         .button{
-            width: 55%;
+            width: 45%;
             .button-title{
                 @include btn;
+
                 &:hover {
                     opacity: 0.8;
                     box-shadow: 5px 5px 2px rgba(199,199,199,0.79);

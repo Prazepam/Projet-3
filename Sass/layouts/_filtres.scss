@@ -1,6 +1,6 @@
-@import "../Sass/utiles/colors.scss";
-@import "../Sass/utiles/mixins.scss";
-@import "../Sass/utiles/animation.scss";
+@import "Sass/utiles/colors.scss";
+@import "Sass/utiles/mixins.scss";
+@import "Sass/utiles/animation.scss";
 
 @media screen and (min-width: 320px) {
     .menu{
@@ -86,8 +86,9 @@
     }
 }
 
-@media screen and (min-width:1920px){
-    .filtre .service-item .num{
-        width: 18%;
+@media screen and (min-width: 1920px){
+    .menu .service-item .num{
+        width: 20%;
     }
+    
 }
