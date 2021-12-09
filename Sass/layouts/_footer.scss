@@ -1,0 +1,69 @@
+@import "../Sass/utiles/colors.scss";
+@import "../Sass/utiles/mixins.scss";
+@import "../Sass/utiles/animation.scss";
+
+@media screen and (min-width: 320px) {
+    .foot-page{
+        background-color: $footergrey;
+        width: 100%;
+        height: 230px;
+        color: white;
+        .foot-title{
+            margin-left: 5%;
+            margin-top: 0%;
+            padding-top: 5%;
+            font-family : 'Shrikhand', cursif ;
+        }
+        ul {
+            list-style-type: none;
+            text-decoration: none;
+            list-style: none;
+            list-style-image: none;
+            margin-left: -5%;
+            a{
+                list-style: none;
+                text-decoration: none;
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                }
+        }
+    }
+    .foot-icon{
+        width: 90%;
+        height: 30px;
+        display: flex;
+        margin-left: 5%;
+        align-items: center;
+        .icon{
+            display: flex;
+            align-items: center;
+            width: 5%;
+            margin-left: 5%;
+        }
+    }
+    .list2 {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .foot-icon{
+        margin-left: 0%;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .foot-page .foot-title{
+        padding-top: 1%;
+        margin-left: 5%;
+    }
+    .foot-icon{
+        margin-left: 0%;
+    }
+    .list2{
+        margin-left: 7%;
+    }
+}

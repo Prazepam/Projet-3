@@ -1,0 +1,245 @@
+@import "../Sass/utiles/colors.scss";
+@import "../Sass/utiles/mixins.scss";
+@import "../Sass/utiles/animation.scss";
+
+@media screen and (min-width: 320px) {
+    .Menu{
+        width: 100%;
+        min-height: 1350px;
+        .restaurant-pic{
+            width: 100%;
+            height: 200px;
+        }
+        .Mpic1{
+            background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+            @include pic-menu;
+        }
+        .Mpic2{
+            background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+            @include pic-menu;
+        }
+        .Mpic3{
+            background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+            @include pic-menu;
+        }
+        .Mpic4{
+            background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+            @include pic-menu;
+        }
+        .restaurant-bloc{
+            background-color: $lightgrey;
+            border-radius: 10px 10px 0px 0px ;
+            font-family: 'Roboto', sans-serif;
+            min-height: 1350px;
+            padding-bottom: 2%;
+            &:hover .menu-heart{
+                opacity: 1;
+                transform: scale(1.15);
+            }
+        }
+        .restaurant-title{
+            @include flex-center;
+            margin-left: 5%;
+            width: 95%;
+            justify-content: space-around;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 120%;
+            cursor: pointer;
+            .heart{
+                font-size: 120%;
+                .menu-like{
+                    margin-left: 20%;
+                    opacity: 1;
+                    transform: scale(1);
+                    transition-property: transform;
+                    transition-duration: 400ms;
+                    }
+                .menu-heart{
+                    margin-left: -55%;
+                    @include purpletopink;
+                    opacity: 0;
+                    transform: scale(1);
+                    transition-property: transform;
+                    transition-duration: 400ms;
+                    }
+                }
+            &:hover .menu-heart{
+                opacity: 1;
+                transform: scale(1.15);
+            }
+            &:hover .menu-like{
+                opacity: 0;
+                transform: scale(0);
+                transition-property: transform;
+            }
+        }
+        .food-box{
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}){
+                    animation-delay: 200ms * $i;
+                }
+            }
+            @include flex-center;
+            background-color: white;
+            justify-content: space-between;
+            margin-bottom: 5%;
+            width: 90%;
+            height: 90px;
+            border-radius: 15px;
+            margin-left: 5%;
+            @include shadow-box;
+            cursor: pointer;
+            overflow: hidden;
+            transition-property: transform;
+            transition-duration: 1s;
+            animation: appear 3s;
+            .food-description{
+                margin-left: 5%;
+                width: 70%;
+                margin-right: 0%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .food-name{
+                font-weight: bold;
+                width: 100%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .food-ingredients{
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .food-price{
+                font-weight: bold;
+                margin-right: 5%;
+                margin-left: 70%;
+                transition-duration: 2s;
+            }
+            .food-priceandcheck{
+                display: flex;
+                height: 100%;
+                align-items: flex-end;
+                width: 30%;
+                .check{
+                    @include flex-center;
+                    height: 100%;
+                    width: 5rem;
+                    background-color: $mindgreen;
+                    border-radius: 0px 10px 10px 0px;
+                    justify-content: center;
+                    font-size: 130%;
+                    .check-icon{
+                        color:$mindgreen;
+                        background-color: white;
+                        width: 42%;
+                        height: 35%;
+                        border-radius: 100%;
+                        @include flex-center;
+                        align-items: center;
+                    }
+                }
+            }
+            &:hover .food-priceandcheck{
+                width: 30%;
+            }
+            &:hover .food-price{
+                margin-left: 0%;
+            }
+        }
+        .plat-title{
+            font-weight: lighter;
+            text-transform: uppercase;
+            margin-left: 5%;
+            border-bottom: 4px $mindgreen solid;
+            width: 15%;
+        }
+        .menu-button{
+            @include btn;
+            margin-bottom: 10%;
+            margin-left: 15%;
+            margin-right: 15%;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+   
+    .Menu .menu-button{
+        width: 40%;
+        margin-left: 30%;
+    }
+    .Menu .food-box{
+        width: 66%;
+        margin-left: 17%;
+        margin-right: 17%;
+        .food-description{
+            font-size: 130%;
+        }
+        .food-priceandcheck{
+            width: 22%;
+            margin-left: 5%;
+        }
+    }
+    .restaurant-title h1{
+        font-size: 160%;
+        margin-left: 15%;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .restaurant-title h1{
+        margin-left: 25%;
+        font-size: 200%;
+    }
+    .restaurant-menu{
+        display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+                "starter course dessert";
+    }
+    .Menu{
+        min-height: 860px;
+        .restaurant-bloc{
+            min-height: 790px;
+            padding-bottom: 0%;
+        }
+        .menu-button{
+            height: 54px;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            width: 20%;
+            margin-left: 40%;
+        }
+        .food-box{
+            .food-price{
+            margin-left: 66%;
+            }
+            .food-priceandcheck{
+                margin-left: 3%;
+                width: 30%;
+                .check{
+                    width: 6rem;
+                }
+            }
+            &:hover .food-priceandcheck{
+                width: 30%;
+            }
+        }
+        .restaurant-pic{
+            height: 300px;
+        }
+    }
+}
+
+@media screen and (min-width:1920px){
+    .Menu .food-box .food-price{
+        margin-left: 72%;
+    }
+}
