@@ -2,8 +2,7 @@
 @import "Sass/utiles/mixins.scss";
 @import "Sass/utiles/animation.scss";
 @font-face {
-    font-family: 'Shrikhand', cursive;
-    src: url(images/Shrikhand/OFL.txt) format('truetype');
+    font-family: 'Shrikhand';
     src: url(images/Shrikhand/Shrikhand-Regular.ttf) format('truetype');
     font-weight: normal;
 }
@@ -17,8 +16,9 @@
         h1{
             margin-left: 5%;
             margin-top: 0%;
-            padding-top: 5%;
-            font-family : 'Shrikhand', cursive;
+            padding-top: 2%;
+            font-family : 'Shrikhand';
+            font-style: italic;
         }
         ul {
             list-style-type: none;

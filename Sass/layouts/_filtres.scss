@@ -5,7 +5,7 @@
 @media screen and (min-width: 320px) {
     .menu{
         width: 100%;
-        h1{
+        h2{
             margin-left: 5%;
         }
         .service-item{
@@ -51,7 +51,6 @@
         transform: scale(1.05);
     } 
 }
-
 @media screen and (min-width: 768px) {
     .filtre{
         display: flex;
@@ -67,6 +66,12 @@
                 margin-left: -10%;
             }
         }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .filtre .service-item .num{
+        width: 12%;
     }
 }
 
@@ -88,7 +93,7 @@
 
 @media screen and (min-width: 1920px){
     .menu .service-item .num{
-        width: 20%;
+        width: 18%;
     }
     
 }

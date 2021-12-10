@@ -7,8 +7,10 @@
 @import "../Sass/layouts/_header.scss";
 @import "../Sass/layouts/_menu.scss";
 @import "../Sass/layouts/_restocard.scss";
+@import "../Sass/layouts/_contact.scss";
+
 @font-face {
-    font-family: 'Shrikhand', cursif;
+    font-family: 'Shrikhand';
     src: url(images/Shrikhand/OFL.txt) format('truetype');
     src: url(images/Shrikhand/Shrikhand-Regular.ttf) format('truetype');
     font-weight: normal;
@@ -20,18 +22,7 @@ body{
     margin-left: 0%;
     margin-bottom: 0%;
     margin-top: 0%;
-}
-header{
-    width: 100%;
-    height: 200px;
-    img{
-        height: 50%;
-        width: 50%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        z-index: 2;
-    }
+
 }
 .loader{
     background-color: white;
@@ -49,3 +40,4 @@ header{
         @include purpletopink;
     }
 }
+

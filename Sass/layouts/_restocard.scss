@@ -9,7 +9,7 @@
         height: 1300px;
         display: flex;
         flex-direction: column;
-        h1{
+        h2{
             margin-left: 5%;
             font-family: 'Roboto', sans-serif;
         }
@@ -126,6 +126,11 @@
     }
     .restaurant-heart{
         margin-left: -25px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .restaurants{
+        height: 1650px;
     }
 }
 @media screen and (min-width: 1440px){
