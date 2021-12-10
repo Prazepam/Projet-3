@@ -1,6 +1,12 @@
 @import "Sass/utiles/colors.scss";
 @import "Sass/utiles/mixins.scss";
 @import "Sass/utiles/animation.scss";
+@font-face {
+    font-family: 'Shrikhand', cursive;
+    src: url(images/Shrikhand/OFL.txt) format('truetype');
+    src: url(images/Shrikhand/Shrikhand-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
 
 @media screen and (min-width: 320px) {
     .foot-page{
@@ -8,11 +14,11 @@
         width: 100%;
         height: 230px;
         color: white;
-        .foot-title{
+        h1{
             margin-left: 5%;
             margin-top: 0%;
             padding-top: 5%;
-            font-family : 'Shrikhand', cursif ;
+            font-family : 'Shrikhand', cursive;
         }
         ul {
             list-style-type: none;

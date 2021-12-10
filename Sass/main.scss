@@ -2,12 +2,17 @@
 @import "../Sass/utiles/colors.scss";
 @import "../Sass/utiles/mixins.scss";
 @import "../Sass/utiles/animation.scss";
-@import url('https://fonts.googleapis.com/css2? family= Shrikhand & display=swap');
 @import "../Sass/layouts/_filtres.scss";
 @import "../Sass/layouts/_footer.scss";
 @import "../Sass/layouts/_header.scss";
 @import "../Sass/layouts/_menu.scss";
 @import "../Sass/layouts/_restocard.scss";
+@font-face {
+    font-family: 'Shrikhand', cursif;
+    src: url(images/Shrikhand/OFL.txt) format('truetype');
+    src: url(images/Shrikhand/Shrikhand-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
 
 
 body{

@@ -1,5 +1,4 @@
 /*/POLICES/*/
-@import url("https://fonts.googleapis.com/css2? family= Shrikhand & display=swap");
 @use "../Sass/utiles/colors.scss";
 @keyframes wish {
   0% {
@@ -148,17 +147,23 @@
   100% {
     transform: rotate(0); } }
 
+@font-face {
+  font-family: 'Shrikhand', cursive;
+  src: url(images/Shrikhand/OFL.txt) format("truetype");
+  src: url(images/Shrikhand/Shrikhand-Regular.ttf) format("truetype");
+  font-weight: normal; }
+
 @media screen and (min-width: 320px) {
   .foot-page {
     background-color: #282828;
     width: 100%;
     height: 230px;
     color: white; }
-    .foot-page .foot-title {
+    .foot-page h1 {
       margin-left: 5%;
       margin-top: 0%;
       padding-top: 5%;
-      font-family: 'Shrikhand', cursif; }
+      font-family: 'Shrikhand', cursive; }
     .foot-page ul {
       list-style-type: none;
       text-decoration: none;
@@ -434,76 +439,81 @@
         opacity: 0;
         transform: scale(0);
         transition-property: transform; }
-    .Menu .food-box {
-      display: flex;
-      align-items: center;
-      background-color: white;
-      justify-content: space-between;
-      margin-bottom: 5%;
-      width: 90%;
-      height: 90px;
-      border-radius: 15px;
-      margin-left: 5%;
-      box-shadow: 5px 5px 2px #e5e5e5;
-      cursor: pointer;
-      overflow: hidden;
+    .Menu .restaurant-menu {
+      transition-property: transform;
+      transition-duration: 1s;
+      animation: appear 3s;
+      transition-property: transform;
+      transition-duration: 1s;
+      animation: appear 3s;
       transition-property: transform;
       transition-duration: 1s;
       animation: appear 3s; }
-      .Menu .food-box:nth-child(1) {
+      .Menu .restaurant-menu:nth-child(1) {
         animation-delay: 200ms; }
-      .Menu .food-box:nth-child(2) {
+      .Menu .restaurant-menu:nth-child(2) {
         animation-delay: 400ms; }
-      .Menu .food-box:nth-child(3) {
+      .Menu .restaurant-menu:nth-child(3) {
         animation-delay: 600ms; }
-      .Menu .food-box:nth-child(4) {
-        animation-delay: 800ms; }
-      .Menu .food-box .food-description {
-        margin-left: 5%;
-        width: 70%;
-        margin-right: 0%;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden; }
-      .Menu .food-box .food-name {
-        font-weight: bold;
-        width: 100%;
-        text-overflow: ellipsis;
-        overflow: hidden; }
-      .Menu .food-box .food-ingredients {
-        text-overflow: ellipsis;
-        overflow: hidden; }
-      .Menu .food-box .food-price {
-        font-weight: bold;
-        margin-right: 5%;
-        margin-left: 70%;
-        transition-duration: 2s; }
-      .Menu .food-box .food-priceandcheck {
+      .Menu .restaurant-menu .food-box {
         display: flex;
-        height: 100%;
-        align-items: flex-end;
-        width: 30%; }
-        .Menu .food-box .food-priceandcheck .check {
-          display: grid;
-          place-items: center;
+        align-items: center;
+        background-color: white;
+        justify-content: space-between;
+        margin-bottom: 5%;
+        width: 90%;
+        height: 90px;
+        border-radius: 15px;
+        margin-left: 5%;
+        box-shadow: 5px 5px 2px #e5e5e5;
+        cursor: pointer;
+        overflow: hidden; }
+        .Menu .restaurant-menu .food-box .food-description {
+          margin-left: 5%;
+          width: 70%;
+          margin-right: 0%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden; }
+        .Menu .restaurant-menu .food-box .food-name {
+          font-weight: bold;
+          width: 100%;
+          text-overflow: ellipsis;
+          overflow: hidden; }
+        .Menu .restaurant-menu .food-box .food-ingredients {
+          text-overflow: ellipsis;
+          overflow: hidden; }
+        .Menu .restaurant-menu .food-box .food-price {
+          font-weight: bold;
+          margin-right: 5%;
+          margin-left: 70%;
+          transition-duration: 2s; }
+        .Menu .restaurant-menu .food-box .food-priceandcheck {
+          display: flex;
           height: 100%;
-          width: 5rem;
-          background-color: #8ADDC5;
-          border-radius: 0px 10px 10px 0px;
-          justify-content: center;
-          font-size: 130%; }
-          .Menu .food-box .food-priceandcheck .check i {
-            color: #8ADDC5;
-            background-color: white;
+          align-items: flex-end;
+          width: 30%; }
+          .Menu .restaurant-menu .food-box .food-priceandcheck .check {
             display: grid;
             place-items: center;
-            aspect-ratio: 1;
-            width: 2rem;
-            border-radius: 1rem; }
-      .Menu .food-box:hover .food-price {
-        margin-left: 0%; }
-      .Menu .food-box:hover i {
-        animation: check-spin 1s; }
+            height: 100%;
+            width: 5rem;
+            background-color: #8ADDC5;
+            border-radius: 0px 10px 10px 0px;
+            justify-content: center;
+            font-size: 130%; }
+            .Menu .restaurant-menu .food-box .food-priceandcheck .check i {
+              color: #8ADDC5;
+              background-color: white;
+              display: grid;
+              place-items: center;
+              aspect-ratio: 1;
+              width: 2rem;
+              border-radius: 1rem; }
+        .Menu .restaurant-menu .food-box:hover .food-price {
+          margin-left: 0%; }
+        .Menu .restaurant-menu .food-box:hover i {
+          animation: check-spin 1s; }
     .Menu .plat-title {
       font-weight: lighter;
       text-transform: uppercase;
@@ -579,12 +589,34 @@
 @media screen and (min-width: 1920px) {
   .Menu {
     height: 1100px; }
-    .Menu .food-box .food-price {
-      margin-left: 65%; }
-    .Menu .food-box .food-priceandcheck {
-      width: 23%; }
-    .Menu .food-box:hover .food-priceandcheck {
-      width: 23%; } }
+    .Menu .restaurant-menu {
+      transition-property: transform;
+      transition-duration: 1s;
+      animation: appear 3s;
+      transition-property: transform;
+      transition-duration: 1s;
+      animation: appear 3s;
+      transition-property: transform;
+      transition-duration: 1s;
+      animation: appear 3s; }
+      .Menu .restaurant-menu:nth-child(1) {
+        animation-delay: 200ms; }
+      .Menu .restaurant-menu .food-priceandcheck {
+        position: relative; }
+      .Menu .restaurant-menu:nth-child(2) {
+        animation-delay: 400ms; }
+      .Menu .restaurant-menu .food-priceandcheck {
+        position: relative; }
+      .Menu .restaurant-menu:nth-child(3) {
+        animation-delay: 600ms; }
+      .Menu .restaurant-menu .food-priceandcheck {
+        position: relative; }
+      .Menu .restaurant-menu .food-box .food-price {
+        margin-left: 72%; }
+      .Menu .restaurant-menu .food-box .food-priceandcheck {
+        width: 20%; }
+      .Menu .restaurant-menu .food-box:hover .food-priceandcheck {
+        width: 20%; } }
 
 @use "../Sass/utiles/colors.scss";
 @keyframes wish {
@@ -764,6 +796,12 @@
       grid-template-areas: "R1 R2" "R3 R4"; }
   .New {
     font-size: 150%; } }
+
+@font-face {
+  font-family: 'Shrikhand', cursif;
+  src: url(images/Shrikhand/OFL.txt) format("truetype");
+  src: url(images/Shrikhand/Shrikhand-Regular.ttf) format("truetype");
+  font-weight: normal; }
 
 body {
   margin-right: 0%;
