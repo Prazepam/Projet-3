@@ -5,7 +5,7 @@
 @media screen and (min-width: 320px) {
     .Menu{
         width: 100%;
-        min-height: 1350px;
+        height: auto;
         .restaurant-pic{
             width: 100%;
             height: 200px;
@@ -30,7 +30,7 @@
             background-color: $lightgrey;
             border-radius: 10px 10px 0px 0px ;
             font-family: 'Roboto', sans-serif;
-            min-height: 1350px;
+            height: auto;
             padding-bottom: 2%;
             &:hover .menu-heart{
                 opacity: 1;
@@ -39,14 +39,14 @@
         }
         .restaurant-title{
             @include flex-center;
-            margin-left: 5%;
+            margin-left: 0%;
             width: 95%;
             justify-content: space-around;
             font-style: italic;
             font-weight: bolder;
             font-size: 120%;
             cursor: pointer;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Shrikhand';
             .heart{
                 font-size: 120%;
                 .menu-like{
@@ -96,6 +96,7 @@
                 @include shadow-box;
                 cursor: pointer;
                 overflow: hidden;
+                align-items: flex-end;
                 
                 .food-description{
                     margin-left: 5%;
@@ -118,41 +119,36 @@
                 .food-price{
                     font-weight: bold;
                     margin-right: 5%;
-                    margin-left: 61%;
-                    transition-duration: 2s;
+                    margin-left: auto;
+                    padding-bottom: 2%;
                 }
-                .food-priceandcheck{
-                    display: flex;
+                .check{
+                    display: grid;
+                    place-items: center;
                     height: 100%;
-                    align-items: flex-end;
-                    width: 30%;
-                    .check{
+                    width: 5rem;
+                    background-color: $mindgreen;
+                    border-radius: 0px 10px 10px 0px;
+                    justify-content: center;
+                    font-size: 130%;
+                    margin-right: -5rem;
+                    transition: 2s;
+                    i{
+                        color:$mindgreen;
+                        background-color: white;
                         display: grid;
                         place-items: center;
-                        height: 100%;
-                        width: 5rem;
-                        background-color: $mindgreen;
-                        border-radius: 0px 10px 10px 0px;
-                        justify-content: center;
-                        font-size: 130%;
-                        i{
-                            color:$mindgreen;
-                            background-color: white;
-                            display: grid;
-                            place-items: center;
-                            height: 2rem;
-                            width: 2rem;
-                            border-radius: 1rem;
-                        
-                        }
+                        height: 2rem;
+                        width: 2rem;
+                        border-radius: 1rem;                        
                     }
                 }
                 &:hover{
-                    .food-price{
-                        margin-left: 0%;
+                    .check{
+                        margin-right: 0rem;
                     }
                     i{
-                    animation: check-spin 1s;
+                    animation: check-spin 3s;
                     }
                 }
             }
@@ -175,43 +171,16 @@
         }
     }
 }
-@media screen and (min-width: 375px) {
-    .Menu .restaurant-menu .food-box .food-price{
-        margin-left: 68%;
-    }   
-}
-@media screen and (min-width: 425px) {
-    .Menu .restaurant-menu .food-box .food-price{
-        margin-left: 70%;
-    }   
-}
 @media screen and (min-width: 768px) {
    
     .Menu .menu-button{
         width: 40%;
         margin-left: 30%;
     }
-    .Menu .restaurant-menu .food-box{
-        width: 66%;
-        margin-left: 17%;
-        margin-right: 17%;
-        .food-description{
-            font-size: 130%;
-        }
-        .food-priceandcheck{
-            width: 22%;
-            margin-left: 5%;
-        }
-    }
     .restaurant-title h1{
         font-size: 160%;
         margin-left: 15%;
     }
-}
-@media screen and (min-width: 1024px) {
-    .Menu .restaurant-menu .food-box .food-price{
-        margin-left: 75%;
-    }   
 }
 @media screen and (min-width: 1440px){
     .restaurant-title h1{
@@ -226,9 +195,7 @@
                 "starter course dessert";
     }
     .Menu{
-        min-height: 860px;
         .restaurant-bloc{
-            min-height: 790px;
             padding-bottom: 0%;
         }
         .menu-button{
@@ -238,21 +205,6 @@
             width: 20%;
             margin-left: 40%;
         }
-        .restaurant-menu .food-box{
-            .food-price{
-            margin-left: 63%;
-            }
-            .food-priceandcheck{
-                margin-left: 3%;
-                width: 30%;
-                .check{
-                    width: 6rem;
-                }
-            }
-            &:hover .food-priceandcheck{
-                width: 30%;
-            }
-        }
         .restaurant-pic{
             height: 300px;
         }
@@ -260,7 +212,6 @@
 }
 @media screen and (min-width:1920px){
     .Menu{
-        height: 1100px;
         .restaurant-menu{
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}){
@@ -269,20 +220,6 @@
                 transition-property: transform;
                 transition-duration: 1s;
                 animation: appear 3s;
-                .food-priceandcheck{
-                    position: relative;
-                }
-            }
-            .food-box{
-                .food-price{
-                    margin-left: 60%;
-                }
-                .food-priceandcheck{
-                    width: 20%;
-                }
-                &:hover .food-priceandcheck{
-                    width: 20%;
-                }
             }
         }
     }
