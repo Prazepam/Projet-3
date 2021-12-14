@@ -14,6 +14,7 @@
         gap: 1rem;
         justify-content: space-around;
         align-items: center;
+        padding: 0%;
     }
     li{
         &::before {
@@ -49,7 +50,7 @@
         cursor: pointer;
         &:hover {
             background-color: $lightpurple;
-            transform: scale(1.15);
+            transform: scale(1.05);
         }
         &:hover >i{
             color: $purple;

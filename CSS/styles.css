@@ -59,7 +59,8 @@
     display: flex;
     gap: 1rem;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    padding: 0%; }
   .filtre li {
     margin-left: 5%;
     position: relative;
@@ -93,7 +94,7 @@
       left: -1rem; }
     .filtre li:hover {
       background-color: #F2E7FF;
-      transform: scale(1.15); }
+      transform: scale(1.05); }
     .filtre li:hover > i {
       color: #9356DC; }
     .filtre li i {
