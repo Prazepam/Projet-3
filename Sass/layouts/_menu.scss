@@ -32,10 +32,6 @@
             font-family: 'Roboto', sans-serif;
             height: auto;
             padding-bottom: 2%;
-            &:hover .menu-heart{
-                opacity: 1;
-                transform: scale(1.15);
-            }
         }
         .restaurant-title{
             @include flex-center;
@@ -44,7 +40,7 @@
             justify-content: space-around;
             font-style: italic;
             font-weight: bolder;
-            font-size: 120%;
+            font-size: 100%;
             cursor: pointer;
             font-family: 'Shrikhand';
             .heart{
@@ -64,15 +60,15 @@
                     transition-property: transform;
                     transition-duration: 400ms;
                     }
+                &:hover .menu-heart{
+                    opacity: 1;
+                    transform: scale(1.15);
                 }
-            &:hover .menu-heart{
-                opacity: 1;
-                transform: scale(1.15);
-            }
-            &:hover .menu-like{
-                opacity: 0;
-                transform: scale(0);
-                transition-property: transform;
+                &:hover .menu-like{
+                    opacity: 0;
+                    transform: scale(0);
+                    transition-property: transform;
+                }
             }
         }
         .restaurant-menu{
@@ -170,6 +166,12 @@
             }
         }
     }
+}
+@media screen and (min-width: 375px) {
+    .Menu .restaurant-title{
+        font-size: 120%;
+    }
+    
 }
 @media screen and (min-width: 768px) {
    

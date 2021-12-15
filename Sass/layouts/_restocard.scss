@@ -37,6 +37,43 @@
                     margin-top: 0%;
                 }
             }
+            .heart{
+                display: flex;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                width: 10%;
+                height: auto;
+                .restaurant-like{
+                    font-size: 150%;
+                    opacity: 1;
+                    transform: scale(1);
+                    transition-property: transform;
+                    transition-duration: 0ms;
+                    position: absolute;
+                    margin: auto;
+                }
+                .restaurant-heart{
+                    font-size: 150%;
+                    position: absolute;
+                    @include purpletopink;
+                    opacity: 0;
+                    transform: scale(1);
+                    transition-property: transform;
+                    transition-duration: 400ms;
+                    border: white 2px solid;
+                    margin: auto;
+                }
+                &:hover .restaurant-heart{
+                    opacity: 1;
+                    transform: scale(1.15);
+                }
+                &:hover .restaurant-like{
+                    opacity: 0;
+                    transform: scale(0);
+                    transition-property: transform;
+                }
+            }
         }
     }
     .New{
@@ -48,26 +85,6 @@
         margin-left: 70%;
         margin-top: 0%;
 
-    }
-    .restaurant-like{
-        font-size: 150%;
-        margin-left: 10%;
-        opacity: 1;
-        transform: scale(1);
-        transition-property: transform;
-        transition-duration: 400ms;
-
-    }
-    .restaurant-heart{
-        font-size: 150%;
-        margin-left: -6.5%;
-        @include purpletopink;
-        opacity: 0;
-        transform: scale(1);
-        transition-property: transform;
-        transition-duration: 400ms;
-        border: white 2px solid;
-      
     }
     .restaurant-link{
         text-decoration: none;
@@ -97,15 +114,6 @@
             background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
             @include pic-details;
             @include shadow-box;
-        }
-        &:hover .restaurant-heart{
-            opacity: 1;
-            transform: scale(1.15);
-        }
-        &:hover .restaurant-like{
-            opacity: 0;
-            transform: scale(0);
-            transition-property: transform;
         }
     }
     

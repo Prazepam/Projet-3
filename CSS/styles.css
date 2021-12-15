@@ -454,9 +454,6 @@
       font-family: 'Roboto', sans-serif;
       height: auto;
       padding-bottom: 2%; }
-      .Menu .restaurant-bloc:hover .menu-heart {
-        opacity: 1;
-        transform: scale(1.15); }
     .Menu .restaurant-title {
       display: flex;
       align-items: center;
@@ -465,7 +462,7 @@
       justify-content: space-around;
       font-style: italic;
       font-weight: bolder;
-      font-size: 120%;
+      font-size: 100%;
       cursor: pointer;
       font-family: 'Shrikhand'; }
       .Menu .restaurant-title .heart {
@@ -486,13 +483,13 @@
           transform: scale(1);
           transition-property: transform;
           transition-duration: 400ms; }
-      .Menu .restaurant-title:hover .menu-heart {
-        opacity: 1;
-        transform: scale(1.15); }
-      .Menu .restaurant-title:hover .menu-like {
-        opacity: 0;
-        transform: scale(0);
-        transition-property: transform; }
+        .Menu .restaurant-title .heart:hover .menu-heart {
+          opacity: 1;
+          transform: scale(1.15); }
+        .Menu .restaurant-title .heart:hover .menu-like {
+          opacity: 0;
+          transform: scale(0);
+          transition-property: transform; }
     .Menu .restaurant-menu {
       transition-property: transform;
       transition-duration: 1s;
@@ -588,6 +585,10 @@
       margin-right: 15%; }
       .Menu .menu-button:hover {
         opacity: 0.8; } }
+
+@media screen and (min-width: 375px) {
+  .Menu .restaurant-title {
+    font-size: 120%; } }
 
 @media screen and (min-width: 768px) {
   .Menu .menu-button {
@@ -690,6 +691,41 @@
           padding-top: 5%; }
         .restaurants .restaurant-descritption .restaurant-text .restaurant-loc {
           margin-top: 0%; }
+      .restaurants .restaurant-descritption .heart {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        height: auto; }
+        .restaurants .restaurant-descritption .heart .restaurant-like {
+          font-size: 150%;
+          opacity: 1;
+          transform: scale(1);
+          transition-property: transform;
+          transition-duration: 0ms;
+          position: absolute;
+          margin: auto; }
+        .restaurants .restaurant-descritption .heart .restaurant-heart {
+          font-size: 150%;
+          position: absolute;
+          color: transparent;
+          background-image: linear-gradient(0deg, #E054D2, #9356DC);
+          background-clip: text;
+          -webkit-background-clip: text;
+          opacity: 0;
+          transform: scale(1);
+          transition-property: transform;
+          transition-duration: 400ms;
+          border: white 2px solid;
+          margin: auto; }
+        .restaurants .restaurant-descritption .heart:hover .restaurant-heart {
+          opacity: 1;
+          transform: scale(1.15); }
+        .restaurants .restaurant-descritption .heart:hover .restaurant-like {
+          opacity: 0;
+          transform: scale(0);
+          transition-property: transform; }
   .New {
     color: #146C46;
     background-color: #8ADDC5;
@@ -699,25 +735,6 @@
     justify-content: center;
     margin-left: 70%;
     margin-top: 0%; }
-  .restaurant-like {
-    font-size: 150%;
-    margin-left: 10%;
-    opacity: 1;
-    transform: scale(1);
-    transition-property: transform;
-    transition-duration: 400ms; }
-  .restaurant-heart {
-    font-size: 150%;
-    margin-left: -6.5%;
-    color: transparent;
-    background-image: linear-gradient(0deg, #E054D2, #9356DC);
-    background-clip: text;
-    -webkit-background-clip: text;
-    opacity: 0;
-    transform: scale(1);
-    transition-property: transform;
-    transition-duration: 400ms;
-    border: white 2px solid; }
   .restaurant-link {
     text-decoration: none;
     color: black;
@@ -769,14 +786,7 @@
       border-radius: 10px 10px 0px 0px;
       cursor: pointer;
       padding-top: 5%;
-      box-shadow: 5px 5px 2px #e5e5e5; }
-    .restaurants-details:hover .restaurant-heart {
-      opacity: 1;
-      transform: scale(1.15); }
-    .restaurants-details:hover .restaurant-like {
-      opacity: 0;
-      transform: scale(0);
-      transition-property: transform; } }
+      box-shadow: 5px 5px 2px #e5e5e5; } }
 
 @media screen and (min-width: 768px) {
   .New {
