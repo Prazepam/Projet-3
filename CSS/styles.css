@@ -1,5 +1,4 @@
 /*/POLICES/*/
-@use "../Sass/utiles/colors.scss";
 @keyframes wish {
   0% {
     transform: scale(1); }
@@ -24,7 +23,6 @@
   100% {
     transform: rotate(0); } }
 
-@use "../Sass/utiles/colors.scss";
 @keyframes wish {
   0% {
     transform: scale(1); }
@@ -108,7 +106,6 @@
     font-size: 110%;
     width: 70%; } }
 
-@use "../Sass/utiles/colors.scss";
 @keyframes wish {
   0% {
     transform: scale(1); }
@@ -191,7 +188,6 @@
   .list2 {
     margin-left: 7%; } }
 
-@use "../Sass/utiles/colors.scss";
 @keyframes wish {
   0% {
     transform: scale(1); }
@@ -388,7 +384,6 @@
     .describe .first {
       padding-top: 2%; } }
 
-@use "../Sass/utiles/colors.scss";
 @keyframes wish {
   0% {
     transform: scale(1); }
@@ -634,7 +629,6 @@
     .Menu .restaurant-menu:nth-child(3) {
       animation-delay: 600ms; } }
 
-@use "../Sass/utiles/colors.scss";
 @keyframes wish {
   0% {
     transform: scale(1); }
