@@ -44,16 +44,17 @@
         width: 100%;
         height: 50px;
         form{
-            width: 50%;
             height: 100%;
-            justify-content: space-around;
+            justify-content: center;
             @include flex-center;
+            gap: 1rem;
         }
         input{
             background-color: transparent;
             border: none;
             color: black;
             font-size: 120%;
+            width: 65%;
         }
     }
     .describe{

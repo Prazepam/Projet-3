@@ -45,7 +45,7 @@
         height: 34px;
         width: 30%;
         transform: scale(1);
-        transition: 2s;
+        transition: 300ms;
         @include shadow-box;
         cursor: pointer;
         &:hover {

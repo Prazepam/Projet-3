@@ -76,7 +76,7 @@
     height: 34px;
     width: 30%;
     transform: scale(1);
-    transition: 2s;
+    transition: 300ms;
     box-shadow: 5px 5px 2px #e5e5e5;
     cursor: pointer; }
     .filtre li::before {
@@ -261,16 +261,17 @@
     width: 100%;
     height: 50px; }
     .search_barre form {
-      width: 50%;
       height: 100%;
-      justify-content: space-around;
+      justify-content: center;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      gap: 1rem; }
     .search_barre input {
       background-color: transparent;
       border: none;
       color: black;
-      font-size: 120%; }
+      font-size: 120%;
+      width: 65%; }
   .describe {
     background-color: #f4f4f4;
     height: 270px;
@@ -604,8 +605,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "starter course dessert"; }
-  .Menu .restaurant-bloc {
-    padding-bottom: 0%; }
   .Menu .menu-button {
     height: 54px;
     margin-top: 3%;
@@ -808,77 +807,6 @@
     grid-template-areas: "R1 R2" "R3 R4"; }
   .New {
     font-size: 150%; } }
-
-@use "../Sass/utiles/colors.scss";
-@keyframes wish {
-  0% {
-    transform: scale(1); }
-  100% {
-    transform: scale(0); } }
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg); } }
-
-@keyframes appear {
-  0% {
-    transform: translateY(10%);
-    opacity: 0; }
-  100% {
-    transform: translateY(0%);
-    opacity: 1; } }
-
-@keyframes check-spin {
-  0% {
-    transform: rotate(-270deg); }
-  100% {
-    transform: rotate(0); } }
-
-@media screen and (min-width: 320px) {
-  .contact {
-    width: 100%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #e5e5e5; }
-    .contact .contact_form {
-      width: 50%;
-      height: 450px;
-      background-color: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      flex-wrap: wrap;
-      border: 1px solid #BABABA;
-      border-radius: 20px 20px 20px 20px;
-      box-shadow: 4px 4px 0px 0px #BABABA;
-      font-family: 'Roboto', sans-serif; }
-      .contact .contact_form .button-contact {
-        margin-top: 10%;
-        height: 40px;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        color: white;
-        background: linear-gradient(0deg, #9356DC, #E054D2);
-        border-radius: 50px;
-        box-shadow: 5px 5px 2px #e5e5e5;
-        cursor: pointer;
-        width: 60%; }
-        .contact .contact_form .button-contact h2 {
-          font-size: 135%;
-          font-family: 'Shrikhand';
-          font-weight: normal; }
-        .contact .contact_form .button-contact:hover {
-          opacity: 0.8;
-          box-shadow: 5px 5px 2px rgba(199, 199, 199, 0.79); } }
-
-@media screen and (min-width: 1440px) {
-  .contact .contact_form .button-contact {
-    margin-top: 2%;
-    width: 28%; } }
 
 @font-face {
   font-family: 'Shrikhand';
